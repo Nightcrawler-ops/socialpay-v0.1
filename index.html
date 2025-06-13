@@ -2,30 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SocialPay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="assets/images/icon1.png">
 </head>
 <body>
     <!-- Header section -->
     <header>
-        <div class="logo"><span class="logo-icon">S</span> SocialPay</div>
+        <div class="logo">
+            <span class="logo-icon">S</span> SocialPay
+        </div>
         <div class="header-right">
-            <div class="profile-menu">
-                <img src="assets/images/profile/yello.jpeg" alt="Profile" class="avatar">
-                <span>Ayotech 🧑‍💻</span>
-                <i class="fa-solid fa-chevron-down"></i>
-            </div>
-            <div class="search-bar collapsed" id="searchBar">
+            <div class="search-bar" id="searchBar">
                 <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
                 <input type="text" placeholder="Search" id="searchInput">
             </div>
+            <div class="profile-menu">
+                <img src="assets/images/profile/yello.jpeg" alt="Profile" class="avatar">
+                <span class="profile-name">Ayotech</span>
+                <i class="fa-solid fa-chevron-down">
+                    <ul class="dropdown">
+                        <li><a href="#">View Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </i>
+            </div>
         </div>
     </header>
+
     <div class="container">
         <!-- Sidebar navigation -->
         <aside class="sidebar">
@@ -39,95 +48,95 @@
                 <li class="settings"><i class="fa-solid fa-gear"></i> Settings</li>
             </ul>
         </aside>
-        <!-- Main content area -->
-        <main>
-            <section class="feed">
-                <!-- Post 1 -->
-                <div class="post">
-                    <div class="post-header">
-                        <img src="assets/images/profile/yello.jpeg" alt="Ayotech" class="avatar">
-                        <div class="user-info">
-                            <span class="username">Ayotech 🧑‍💻</span>
-                            <span class="timestamp">2h</span>
-                        </div>
-                        <span class="timestamp right">2h</span>
+
+        <!-- Main feed area -->
+        <main class="feed">
+            <!-- Post 1 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="assets/images/profile/yello.jpeg" alt="Ayotech" class="avatar">
+                    <div class="user-info">
+                        <span class="username">Ayotech 🧑‍💻</span>
+                        <span class="timestamp">2h</span>
                     </div>
-                    <p class="post-text">Excited to announce our new project is launching soon! Stay tuned for updates.</p>
-                    <div class="post-media">
-                        <img src="assets/images/post/socialmedia.jpg" alt="User" class="avatar">
-                    </div>
-                    <div class="post-actions">
-                        <span class="comment"><i class="fa-regular fa-comment"></i>1.2M</span>
-                        <span class="like"><i class="fa-regular fa-heart"></i> 3.9k</span>
-                        <span class="dollar"><i class="fa-solid fa-dollar-sign"></i>1k</span>
-                        <span class="share"><i class="fa-solid fa-arrow-up-from-bracket"></i>200k</span>
-                    </div>
+                    <span class="timestamp right">2h</span>
                 </div>
-                <!-- Post 2 -->
-                <div class="post">
-                    <div class="post-header">
-                        <img src="assets/images/avatar2.png" alt="KallyFX" class="avatar">
-                        <div class="user-info">
-                            <span class="username">KallyFX 💹</span>
-                            <span class="timestamp">3h</span>
-                        </div>
-                        <span class="timestamp right">3h</span>
-                    </div>
-                    <p class="post-text">Here’s a look at the sunset from last night’s hike</p>
-                    <div class="post-media">
-                        <img src="assets/images/post/media.jpg" alt="User" class="avatar">
-                    </div>
-                    <div class="post-actions">
-                        <span class="comment"><i class="fa-regular fa-comment"></i>1.2M</span>
-                        <span class="like"><i class="fa-regular fa-heart"></i> 3.9k</span>
-                        <span class="dollar"><i class="fa-solid fa-dollar-sign"></i>1k</span>
-                        <span class="share"><i class="fa-solid fa-arrow-up-from-bracket"></i>200k</span>
-                    </div>
+                <p class="post-text">Excited to announce our new project is launching soon! Stay tuned for updates.</p>
+                <div class="post-media">
+                    <img src="assets/images/post/socialmedia.jpg" alt="User" class="avatar">
                 </div>
-                <!-- Post 3 -->
-                <div class="post">
-                    <div class="post-header">
-                        <img src="assets/images/profile/profile 1.jpg" alt="Nath Favour" class="avatar">
-                        <div class="user-info">
-                            <span class="username">Nath Favour</span>
-                            <span class="timestamp">5h</span>
-                        </div>
-                        <span class="timestamp right">5h</span>
-                    </div>
-                    <p class="post-text">Looking for recommendations for a good book to read. Any suggestions?</p>
-                    <div class="post-actions">
-                        <span class="comment"><i class="fa-regular fa-comment"></i>1.2M</span>
-                        <span class="like"><i class="fa-regular fa-heart"></i> 3.9k</span>
-                        <span class="dollar"><i class="fa-solid fa-dollar-sign"></i>1k</span>
-                        <span class="share"><i class="fa-solid fa-arrow-up-from-bracket"></i>200k</span>
-                    </div>
+                <div class="post-actions">
+                    <span class="comment"><i class="fa-regular fa-comment"></i>1.2M</span>
+                    <span class="like"><i class="fa-regular fa-heart"></i> 3.9k</span>
+                    <span class="dollar"><i class="fa-solid fa-dollar-sign"></i>1k</span>
+                    <span class="share"><i class="fa-solid fa-arrow-up-from-bracket"></i>200k</span>
                 </div>
-                <!-- Post 4 -->
-                <div class="post">
-                    <div class="post-header">
-                        <img src="assets/images/avatar4.png" alt="Sarah Lee" class="avatar">
-                        <div class="user-info">
-                            <span class="username">Sarah Lee</span>
-                            <span class="timestamp">8h</span>
-                        </div>
-                        <span class="timestamp right">8h</span>
+            </div>
+            <!-- Post 2 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="assets/images/avatar2.png" alt="KallyFX" class="avatar">
+                    <div class="user-info">
+                        <span class="username">KallyFX 💹</span>
+                        <span class="timestamp">3h</span>
                     </div>
-                    <p class="post-text">Had a great time at the event today! Thanks to everyone who came out. 😊</p>
-                    <div class="post-media">
+                    <span class="timestamp right">3h</span>
+                </div>
+                <p class="post-text">Here’s a look at the sunset from last night’s hike</p>
+                <div class="post-media">
+                    <img src="assets/images/post/media.jpg" alt="User" class="avatar">
+                </div>
+                <div class="post-actions">
+                    <span class="comment"><i class="fa-regular fa-comment"></i>1.2M</span>
+                    <span class="like"><i class="fa-regular fa-heart"></i> 3.9k</span>
+                    <span class="dollar"><i class="fa-solid fa-dollar-sign"></i>1k</span>
+                    <span class="share"><i class="fa-solid fa-arrow-up-from-bracket"></i>200k</span>
+                </div>
+            </div>
+            <!-- Post 3 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="assets/images/profile/profile 1.jpg" alt="Nath Favour" class="avatar">
+                    <div class="user-info">
+                        <span class="username">Nath Favour</span>
+                        <span class="timestamp">5h</span>
+                    </div>
+                    <span class="timestamp right">5h</span>
+                </div>
+                <p class="post-text">Looking for recommendations for a good book to read. Any suggestions?</p>
+                <div class="post-actions">
+                    <span class="comment"><i class="fa-regular fa-comment"></i>1.2M</span>
+                    <span class="like"><i class="fa-regular fa-heart"></i> 3.9k</span>
+                    <span class="dollar"><i class="fa-solid fa-dollar-sign"></i>1k</span>
+                    <span class="share"><i class="fa-solid fa-arrow-up-from-bracket"></i>200k</span>
+                </div>
+            </div>
+            <!-- Post 4 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="assets/images/avatar4.png" alt="Sarah Lee" class="avatar">
+                    <div class="user-info">
+                        <span class="username">Sarah Lee</span>
+                        <span class="timestamp">8h</span>
+                    </div>
+                    <span class="timestamp right">8h</span>
+                </div>
+                <p class="post-text">Had a great time at the event today! Thanks to everyone who came out. 😊</p>
+                <div class="post-media">
                     <img src="assets/images/post/students.jpg" alt="User" class="avatar">
-                    </div>
-                    <div class="post-actions">
-                        <span class="comment"><i class="fa-regular fa-comment"></i>1.2M</span>
-                        <span class="like"><i class="fa-regular fa-heart"></i> 3.9k</span>
-                        <span class="dollar"><i class="fa-solid fa-dollar-sign"></i>1k</span>
-                        <span class="share"><i class="fa-solid fa-arrow-up-from-bracket"></i>200k</span>
-                    </div>
                 </div>
-            </section>
+                <div class="post-actions">
+                    <span class="comment"><i class="fa-regular fa-comment"></i>1.2M</span>
+                    <span class="like"><i class="fa-regular fa-heart"></i> 3.9k</span>
+                    <span class="dollar"><i class="fa-solid fa-dollar-sign"></i>1k</span>
+                    <span class="share"><i class="fa-solid fa-arrow-up-from-bracket"></i>200k</span>
+                </div>
+            </div>
         </main>
+
         <!-- Right sidebar with trending and suggestions -->
         <aside class="rightbar">
-            <div class="trending">
+            <section class="trending">
                 <h3>Trending</h3>
                 <ul>
                     <li>#blockchain</li>
@@ -138,30 +147,31 @@
                     <li>#technology</li>
                     <li>#webdevelopment</li>
                 </ul>
-            </div>
-            <div class="suggestions">
+            </section>
+            <section class="suggestions">
                 <h3>Suggestions</h3>
                 <!-- Suggestion 1 -->
                 <div class="suggestion">
                     <img src="assets/images/avatar5.png" class="avatar" alt="Robert Brown">
                     <div>
                         <span class="username">Robert Brown</span>
-                        <span class="role">Adiventure</span>
+                        <span class="role">Adventurer</span>
                     </div>
-                    <button class="follow-btn">Follow</button>
+                    <button class="follow-btn" type="button">Follow</button>
                 </div>
                 <!-- Suggestion 2 -->
                 <div class="suggestion">
                     <img src="assets/images/avatar6.png" class="avatar" alt="Emily White">
                     <div>
                         <span class="username">Emily White</span>
-                        <span class="role">Erelileri</span>
+                        <span class="role">Explorer</span>
                     </div>
-                    <button class="follow-btn">Follow</button>
+                    <button class="follow-btn" type="button">Follow</button>
                 </div>
-            </div>
+            </section>
         </aside>
     </div>
+
     <!-- Bottom navigation bar for mobile -->
     <nav class="bottom-nav">
         <i class="fa-solid fa-house active"></i>
