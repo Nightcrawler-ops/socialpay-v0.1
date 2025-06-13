@@ -383,8 +383,10 @@ main {
     background: white;    box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
 }
 .bottom-nav i {
-    font-size: 1.5rem;
-    color: #0066ff;
+    font-size: 1.1rem;
+    font-weight: light;
+    color: #1d1d1f;
+    transition: color 0.4s;
     cursor: pointer;
     background: none;
     border: none;
@@ -393,7 +395,13 @@ main {
 
 /* Bottom navigation icons */
 .bottom-nav i:hover {
-    color: #004bb5; /* Darker shade on hover */
+    color: #0066ff; /* Darker shade on hover */
+}
+
+.bottom-nav i.active {
+    color: #0066ff !important;
+    font-weight: bolder;
+    transition: color 0.3s;
 }
 
 /* Responsive Styles */
@@ -468,6 +476,7 @@ main {
         padding: 1rem 1rem 0.5rem 1rem;
         position: relative;
     }
+    
     .header-right {
         flex-direction: row;
         align-items: center;
@@ -484,5 +493,11 @@ main {
     .search-bar {
         background: none;
         padding: 0;
+        margin: 0;
     }
+}
+/* Search bar expanded state */
+.search-bar.expanded {
+    width: 100%;
+    max-width: 400px;
 }
