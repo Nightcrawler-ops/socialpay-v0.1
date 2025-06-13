@@ -25,6 +25,14 @@ header {
     z-index: 10;
 }
 
+/* Header right section for profile and search */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+}
+
 /* Logo styles */
 .logo {
     font-weight: bold;
@@ -51,14 +59,32 @@ header {
     flex: 1;
     margin: 0 2rem;
     max-width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f0f0f0;
+    border-radius: 20px;
+    padding: 0.2rem 0.7rem;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 .search-bar input {
-    width: 100%;
-    border: none;
-    background: #f0f0f0;
+    width: 140px;
+    opacity: 1;
     padding: 0.7rem 1.2rem;
+    border: none;
     border-radius: 20px;
+    background: #f0f0f0;
     font-size: 1rem;
+    transition: width 0.3s, opacity 0.3s;
+}
+.search-bar.collapsed input {
+    width: 0;
+    opacity: 0;
+    padding: 0;
+    border: none;
+    transition: width 0.3s, opacity 0.3s;
+    pointer-events: none;
 }
 
 /* Notification icon styles */
@@ -415,5 +441,49 @@ main {
     }
     .bottom-nav {
         display: none !important; /* Hide bottom nav on desktop */
+    }
+}
+
+/* New styles for search bar animation and header adjustments */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f0f0f0;
+    border-radius: 20px;
+    padding: 0.2rem 0.7rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.search-bar i {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Responsive header arrangement for mobile */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1rem 0.5rem 1rem;
+        position: relative;
+    }
+    .header-right {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+    .profile-menu {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .search-bar {
+        background: none;
+        padding: 0;
     }
 }
