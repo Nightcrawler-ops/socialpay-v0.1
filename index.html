@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SocialPay</title>
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Header section -->
     <header>
         <div class="logo"><span class="logo-icon">S</span> SocialPay</div>
         <div class="search-bar">
@@ -21,6 +24,7 @@
         </div>
     </header>
     <div class="container">
+        <!-- Sidebar navigation -->
         <aside class="sidebar">
             <ul>
                 <li class="active"><i class="fa-solid fa-house"></i> Home</li>
@@ -29,8 +33,10 @@
                 <li><i class="fa-regular fa-user"></i> Profile</li>
             </ul>
         </aside>
+        <!-- Main content area -->
         <main>
             <section class="feed">
+                <!-- Post 1 -->
                 <div class="post">
                     <div class="post-header">
                         <img src="assets/images/avatar1.png" alt="Jane Doe" class="avatar">
@@ -42,12 +48,13 @@
                     </div>
                     <p class="post-text">Excited to announce my new project is launching soon! Stay tuned for updates.</p>
                     <div class="post-actions">
-                        <span><i class="fa-regular fa-comment"></i> 3</span>
-                        <span><i class="fa-regular fa-heart"></i> 3</span>
-                        <span><i class="fa-solid fa-dollar-sign"></i> 3</span>
-                        <span class="more"><i class="fa-solid fa-ellipsis"></i></span>
+                        <span class="comment"><i class="fa-regular fa-comment"></i>1.2M</span>
+                        <span class="like"><i class="fa-regular fa-heart"></i> 3.9k</span>
+                        <span class="dollar"><i class="fa-solid fa-dollar-sign"></i>1k</span>
+                        <span class="share"><i class="fa-solid fa-arrow-up-from-bracket"></i>200k</span>
                     </div>
                 </div>
+                <!-- Post 2 -->
                 <div class="post">
                     <div class="post-header">
                         <img src="assets/images/avatar2.png" alt="David Smith" class="avatar">
@@ -59,15 +66,16 @@
                     </div>
                     <p class="post-text">Here’s a look at the sunset from last night’s hike</p>
                     <div class="post-media">
-                        <img src="assets/images/sunset.jpg" alt="Sunset">
+                        <img src="assets/images/IMG 1.png" alt="User" class="avatar">
                     </div>
                     <div class="post-actions">
-                        <span><i class="fa-regular fa-comment"></i> 3</span>
-                        <span><i class="fa-regular fa-heart"></i> 3</span>
-                        <span><i class="fa-solid fa-dollar-sign"></i> 3</span>
-                        <span class="more"><i class="fa-solid fa-ellipsis"></i></span>
+                        <span class="comment"><i class="fa-regular fa-comment"></i>1.2M</span>
+                        <span class="like"><i class="fa-regular fa-heart"></i> 3.9k</span>
+                        <span class="dollar"><i class="fa-solid fa-dollar-sign"></i>1k</span>
+                        <span class="share"><i class="fa-solid fa-arrow-up-from-bracket"></i>200k</span>
                     </div>
                 </div>
+                <!-- Post 3 -->
                 <div class="post">
                     <div class="post-header">
                         <img src="assets/images/avatar3.png" alt="Alex Johnson" class="avatar">
@@ -79,12 +87,13 @@
                     </div>
                     <p class="post-text">Looking for recommendations for a good book to read. Any suggestions?</p>
                     <div class="post-actions">
-                        <span><i class="fa-regular fa-comment"></i> 3</span>
-                        <span><i class="fa-regular fa-heart"></i> 3</span>
-                        <span><i class="fa-solid fa-dollar-sign"></i> 3</span>
-                        <span class="more"><i class="fa-solid fa-ellipsis"></i></span>
+                        <span class="comment"><i class="fa-regular fa-comment"></i>1.2M</span>
+                        <span class="like"><i class="fa-regular fa-heart"></i> 3.9k</span>
+                        <span class="dollar"><i class="fa-solid fa-dollar-sign"></i>1k</span>
+                        <span class="share"><i class="fa-solid fa-arrow-up-from-bracket"></i>200k</span>
                     </div>
                 </div>
+                <!-- Post 4 -->
                 <div class="post">
                     <div class="post-header">
                         <img src="assets/images/avatar4.png" alt="Sarah Lee" class="avatar">
@@ -96,14 +105,15 @@
                     </div>
                     <p class="post-text">Had a great time at the event today! Thanks to everyone who came out. 😊</p>
                     <div class="post-actions">
-                        <span><i class="fa-regular fa-comment"></i> 3</span>
-                        <span><i class="fa-regular fa-heart"></i> 3</span>
-                        <span><i class="fa-solid fa-dollar-sign"></i> 3</span>
-                        <span class="more"><i class="fa-solid fa-ellipsis"></i></span>
+                        <span class="comment"><i class="fa-regular fa-comment"></i>1.2M</span>
+                        <span class="like"><i class="fa-regular fa-heart"></i> 3.9k</span>
+                        <span class="dollar"><i class="fa-solid fa-dollar-sign"></i>1k</span>
+                        <span class="share"><i class="fa-solid fa-arrow-up-from-bracket"></i>200k</span>
                     </div>
                 </div>
             </section>
         </main>
+        <!-- Right sidebar with trending and suggestions -->
         <aside class="rightbar">
             <div class="trending">
                 <h3>Trending</h3>
@@ -115,6 +125,7 @@
             </div>
             <div class="suggestions">
                 <h3>Suggestions</h3>
+                <!-- Suggestion 1 -->
                 <div class="suggestion">
                     <img src="assets/images/avatar5.png" class="avatar" alt="Robert Brown">
                     <div>
@@ -123,6 +134,7 @@
                     </div>
                     <button class="follow-btn">Follow</button>
                 </div>
+                <!-- Suggestion 2 -->
                 <div class="suggestion">
                     <img src="assets/images/avatar6.png" class="avatar" alt="Emily White">
                     <div>
@@ -134,10 +146,12 @@
             </div>
         </aside>
     </div>
+    <!-- Bottom navigation bar for mobile -->
     <nav class="bottom-nav">
         <i class="fa-solid fa-house"></i>
-        <i class="fa-regular fa-envelope"></i>
-        <i class="fa-solid fa-plus"></i>
+        <i class="fa-solid fa-comment"></i>
+        <i class="fa-solid fa-plus-circle"></i>
+        <i class="fa-solid fa-wallet"></i>
         <i class="fa-regular fa-user"></i>
     </nav>
 </body>

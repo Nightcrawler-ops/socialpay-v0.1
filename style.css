@@ -1,3 +1,4 @@
+/* Reset and base styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,11 +6,13 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
+/* Body background and text color */
 body {
     background-color: #f6f9fc;
     color: #1d1d1f;
 }
 
+/* Header styles: sticky top navigation */
 header {
     display: flex;
     justify-content: space-between;
@@ -17,11 +20,12 @@ header {
     background-color: #ffffff;
     padding: 1rem 2rem;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    position: sticky;
+    position: sticky; /* Keeps header visible on scroll */
     top: 0;
     z-index: 10;
 }
 
+/* Logo styles */
 .logo {
     font-weight: bold;
     color: #0066ff;
@@ -42,6 +46,7 @@ header {
     justify-content: center;
 }
 
+/* Search bar in header */
 .search-bar {
     flex: 1;
     margin: 0 2rem;
@@ -56,6 +61,7 @@ header {
     font-size: 1rem;
 }
 
+/* Notification icon styles */
 .notification i {
     font-size: 1.4rem;
     color: #333;
@@ -63,6 +69,7 @@ header {
     margin-right: 1.5rem;
 }
 
+/* Profile menu in header */
 .profile-menu {
     display: flex;
     align-items: center;
@@ -74,6 +81,7 @@ header {
     border-radius: 50%;
 }
 
+/* Main container layout */
 .container {
     display: flex;
     max-width: 1200px;
@@ -82,6 +90,7 @@ header {
     min-height: 80vh;
 }
 
+/* Sidebar navigation */
 .sidebar {
     width: 220px;
     background: #fff;
@@ -94,6 +103,7 @@ header {
     min-height: 600px;
 }
 
+/* Sidebar menu list */
 .sidebar ul {
     list-style: none;
     display: flex;
@@ -101,6 +111,7 @@ header {
     gap: 1.5rem;
 }
 
+/* Sidebar menu items */
 .sidebar li {
     display: flex;
     align-items: center;
@@ -113,12 +124,14 @@ header {
     transition: background 0.2s;
 }
 
+/* Sidebar active and hover states */
 .sidebar li.active,
 .sidebar li:hover {
     background: #0066ff;
     color: #fff;
 }
 
+/* Sidebar badge (e.g., notification count) */
 .sidebar .badge {
     background: #0066ff;
     color: #fff;
@@ -128,6 +141,7 @@ header {
     margin-left: auto;
 }
 
+/* Main content area */
 main {
     flex: 1;
     max-width: 600px;
@@ -135,12 +149,14 @@ main {
     padding: 0;
 }
 
+/* Feed (list of posts) */
 .feed {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
 
+/* Individual post card */
 .post {
     background: #fff;
     border-radius: 10px;
@@ -149,6 +165,7 @@ main {
     margin-bottom: 0.5rem;
 }
 
+/* Post header: user info and timestamp */
 .post-header {
     display: flex;
     align-items: center;
@@ -176,6 +193,7 @@ main {
     font-size: 0.85rem;
     color: #888;
 }
+/* Timestamp aligned to right in post header */
 .timestamp.right {
     margin-left: auto;
     position: absolute;
@@ -183,11 +201,13 @@ main {
     top: 0;
 }
 
+/* Post text content */
 .post-text {
     margin-bottom: 0.7rem;
     font-size: 1.05rem;
 }
 
+/* Post media (images, etc.) */
 .post-media {
     margin: 0.7rem 0;
     border-radius: 8px;
@@ -204,28 +224,43 @@ main {
     object-fit: cover;
 }
 
+/* Post actions (like, comment, share, etc.) */
 .post-actions {
-    margin-top: 0.5rem;
     display: flex;
-    gap: 2.2rem;
-    font-size: 1.15rem;
-    color: #333;
     align-items: center;
+    gap: 2rem;
+    padding: 0.5rem 0;
+    flex-wrap: wrap;
 }
+
+/* Each action (like, comment, etc.) as a flex row with icon and label */
 .post-actions span {
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     color: #333;
-}
-.post-actions .more {
-    margin-left: auto;
-    color: #888;
-    font-size: 1.2rem;
-    cursor: pointer;
+    white-space: nowrap;
 }
 
+/* Ensure share button stays inline and doesn't overflow */
+.post-actions .share {
+    margin-left: 0;
+    color: #514f4f;
+    cursor: pointer;
+    font-size: 1rem;
+    /* Remove any auto margin that pushes it out */
+}
+
+/* Responsive fix for very small screens */
+@media (max-width: 400px) {
+    .post-actions {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+}
+
+/* Right sidebar container for trending and suggestions */
 .rightbar {
     width: 270px;
     display: flex;
@@ -233,6 +268,7 @@ main {
     gap: 2rem;
 }
 
+/* Trending and suggestions cards */
 .trending, .suggestions {
     background: #fff;
     border-radius: 16px;
@@ -246,6 +282,7 @@ main {
     color: #1d1d1f;
 }
 
+/* Trending list */
 .trending ul {
     list-style: none;
     padding: 0;
@@ -257,6 +294,7 @@ main {
     font-weight: 500;
 }
 
+/* Suggestion user row */
 .suggestion {
     display: flex;
     align-items: center;
@@ -280,6 +318,7 @@ main {
     color: #888;
 }
 
+/* Follow button in suggestions */
 .follow-btn {
     margin-left: auto;
     background: #0066ff;
@@ -296,18 +335,16 @@ main {
     background: #004bb5;
 }
 
+/* Bottom navigation for mobile */
 .bottom-nav {
-    display: none;
+    display: flex;
     justify-content: space-around;
-    align-items: center;
-    padding: 1rem 0 0.7rem 0;
+    padding: 1rem;
     position: fixed;
     bottom: 0;
-    left: 0;
     width: 100%;
     background: white;
     box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
-    z-index: 20;
 }
 .bottom-nav i {
     font-size: 1.6rem;
@@ -319,6 +356,7 @@ main {
 }
 
 /* Responsive Styles */
+/* For tablets and below */
 @media (max-width: 1024px) {
     .container {
         flex-direction: column;
@@ -327,7 +365,7 @@ main {
         margin: 0;
     }
     .sidebar, .rightbar {
-        display: none;
+        display: none; /* Hide sidebars on small screens */
     }
     main {
         max-width: 100vw;
@@ -346,15 +384,16 @@ main {
         max-width: 50%;
     }
     .bottom-nav {
-        display: flex !important;
+        display: flex !important; /* Show bottom nav on mobile */
     }
 }
 
+/* For desktops */
 @media (min-width: 1025px) {
     .sidebar, .rightbar {
-        display: flex;
+        display: flex; /* Show sidebars on large screens */
     }
     .bottom-nav {
-        display: none !important;
+        display: none !important; /* Hide bottom nav on desktop */
     }
 }
