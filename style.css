@@ -56,38 +56,9 @@ header {
     cursor: pointer;
     transition: background 0.3s;
 }
-
-/* Search bar in header */
-.search-bar {
-    flex: 1;
-    margin: 0 2rem;
-    max-width: 400px;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: #f0f0f0;
-    border-radius: 20px;
-    padding: 0.2rem 0.7rem;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-.search-bar input {
-    width: 140px;
-    opacity: 1;
-    padding: 0.7rem 1.2rem;
-    border: none;
-    border-radius: 20px;
-    background: #f0f0f0;
-    font-size: 1rem;
-    transition: width 0.3s, opacity 0.3s;
-}
-.search-bar.collapsed input {
-    width: 0;
-    opacity: 0;
-    padding: 0;
-    border: none;
-    transition: width 0.3s, opacity 0.3s;
-    pointer-events: none;
+.logo-link {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent */
 }
 
 /* Profile menu in header */
@@ -113,15 +84,24 @@ header {
 
 /* Sidebar navigation */
 .sidebar {
-    width: 220px;
+    margin-left: -3rem;
+    width: 250px;
     background: #fff;
-    border-radius: 16px;
-    padding: 2rem 1rem;
+    border-radius: 12px; /* Rounded corners for sidebar */
+    padding: 3rem 1rem; /* Padding for sidebar */
     box-shadow: 0 1px 4px rgba(0,0,0,0.07);
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    min-height: 600px;
+    display: flex; /* Flexbox for vertical alignment */
+    flex-direction: column; /* Stack items vertically */
+    gap: 1.5rem; /* Space between menu items */
+    /* Ensure sidebar is always visible */
+    min-height: auto; /* Allow sidebar to grow with content */
+    position: sticky; /* Keep sidebar fixed on scroll */
+    top: 1px; /* Stick to the top of the viewport */
+    height: 100vh; /* Full height sidebar */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    z-index: 5; /* Ensure sidebar is above other content */
+    /* Add a subtle background gradient */
+    transition: background 0.5s, box-shadow 0.3s;
 }
 
 /* Sidebar menu list */
@@ -164,8 +144,8 @@ header {
 
 /* Main content area */
 main {
-    flex: 1;
-    max-width: 600px;
+    flex: 1; 
+    max-width: 900px;
     margin: 0 auto;
     padding: 0;
 }
@@ -173,8 +153,8 @@ main {
 /* Feed (list of posts) */
 .feed {
     display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+    flex-direction: column; 
+    gap: 1.2rem; /* Space between posts */
 }
 
 /* Individual post card */
@@ -277,7 +257,7 @@ main {
     cursor: pointer;
 }
 .post-actions .share:hover {
-    color: #000000; /* Share color */
+    color: #0066ff; /* Share color */
     cursor: pointer;
 }
 
@@ -303,6 +283,11 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    margin-right: -3rem;
+    position: sticky;
+    top: 1rem;
+    height: fit-content;
+    align-self: flex-start;
 }
 
 /* Trending and suggestions cards */
@@ -383,7 +368,7 @@ main {
     background: white;    box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
 }
 .bottom-nav i {
-    font-size: 1.1rem;
+    font-size: 2rem;
     font-weight: light;
     color: #1d1d1f;
     transition: color 0.4s;
@@ -427,10 +412,7 @@ main {
         gap: 0.7rem;
         padding: 1rem 1rem 0.5rem 1rem;
     }
-    .search-bar {
-        width: 25%;
-        margin: 0 0 0.7rem 0;
-        max-width: 50%;
+    
     }
     .bottom-nav {
         display: flex !important; /* Show bottom nav on mobile */
@@ -439,7 +421,6 @@ main {
     main, .feed {
         padding-bottom: 40px; /* Adjust if your bottom-nav is taller */
     }
-}
 
 /* For desktops */
 @media (min-width: 1025px) {
@@ -449,22 +430,6 @@ main {
     .bottom-nav {
         display: none !important; /* Hide bottom nav on desktop */
     }
-}
-
-/* New styles for search bar animation and header adjustments */
-.search-bar {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: #f0f0f0;
-    border-radius: 20px;
-    padding: 0.2rem 0.7rem;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-.search-bar i {
-    font-size: 1.2rem;
-    color: #333;
 }
 
 /* Responsive header arrangement for mobile */
@@ -490,14 +455,4 @@ main {
         align-items: center;
         gap: 0.5rem;
     }
-    .search-bar {
-        background: none;
-        padding: 0;
-        margin: 0;
-    }
-}
-/* Search bar expanded state */
-.search-bar.expanded {
-    width: 100%;
-    max-width: 400px;
 }
