@@ -61,16 +61,39 @@ header {
     color: inherit; /* Inherit color from parent */
 }
 
+/* notification icon */
+/* Notification icon styles */
+.notification {
+    position: relative; /* Allows badge to be positioned absolutely */
+    cursor: pointer; /* Shows pointer cursor on hover */
+    color: #0066ff; /* Notification icon color */
+    font-size: 1.5rem; /* Icon size */
+}
+/* Notification badge styles */
+.notification .badge {
+    position: absolute; /* Position badge relative to icon */
+    top: -3px; /* Move badge above the icon */
+    right: -5px; /* Move badge to the right of the icon */
+    background: #ff3d00; /* Badge background color (red) */
+    color: #fff; /* Badge text color */
+    border-radius: 12px; /* Rounded badge */
+    padding: 0 6px; /* Horizontal padding for badge */
+    font-size: 0.6em; /* Smaller font size for badge */
+}
+
+
 /* Profile menu in header */
 .profile-menu {
     display: flex;
     align-items: center;
     gap: 0.6rem;
+    cursor: pointer;
 }
 .profile-menu .avatar {
     width: 36px;
     height: 36px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 /* Main container layout */
@@ -83,6 +106,7 @@ header {
 }
 
 /* Sidebar navigation */
+/* Sidebar navigation */
 .sidebar {
     margin-left: -3rem;
     width: 250px;
@@ -94,7 +118,7 @@ header {
     flex-direction: column; /* Stack items vertically */
     gap: 1.5rem; /* Space between menu items */
     /* Ensure sidebar is always visible */
-    min-height: auto; /* Allow sidebar to grow with content */
+    /* min-height removed for Firefox compatibility */
     position: sticky; /* Keep sidebar fixed on scroll */
     top: 1px; /* Stick to the top of the viewport */
     height: 100vh; /* Full height sidebar */
@@ -132,15 +156,6 @@ header {
     color: #fff;
 }
 
-/* Sidebar badge (e.g., notification count) */
-.sidebar .badge {
-    background: #0066ff;
-    color: #fff;
-    border-radius: 12px;
-    padding: 0 8px;
-    font-size: 0.8em;
-    margin-left: auto;
-}
 
 /* Main content area */
 main {
@@ -213,7 +228,7 @@ main {
     margin: 0.7rem 0;
     border-radius: 8px;
     overflow: hidden;
-    max-height: 300px;
+    /* max-height removed to allow images of any height */
     background: #f0f0f0;
     display: flex;
     justify-content: center;
@@ -221,8 +236,9 @@ main {
 }
 .post-media img {
     max-width: 100%;
-    max-height: 100%;
+    height: auto;
     object-fit: cover;
+    display: block;
 }
 
 /* Post actions (like, comment, share, etc.) */
