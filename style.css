@@ -41,6 +41,7 @@ header {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    cursor: pointer;
 }
 .logo-icon {
     background: #0066ff;
@@ -52,6 +53,8 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 /* Search bar in header */
@@ -85,14 +88,6 @@ header {
     border: none;
     transition: width 0.3s, opacity 0.3s;
     pointer-events: none;
-}
-
-/* Notification icon styles */
-.notification i {
-    font-size: 1.4rem;
-    color: #333;
-    cursor: pointer;
-    margin-right: 1.5rem;
 }
 
 /* Profile menu in header */
@@ -134,7 +129,7 @@ header {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 /* Sidebar menu items */
@@ -381,20 +376,24 @@ main {
 .bottom-nav {
     display: flex;
     justify-content: space-around;
-    padding: 1rem;
+    padding: 0.8rem;
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: white;
-    box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
+    background: white;    box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
 }
 .bottom-nav i {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: #0066ff;
     cursor: pointer;
     background: none;
     border: none;
     outline: none;
+}
+
+/* Bottom navigation icons */
+.bottom-nav i:hover {
+    color: #004bb5; /* Darker shade on hover */
 }
 
 /* Responsive Styles */
