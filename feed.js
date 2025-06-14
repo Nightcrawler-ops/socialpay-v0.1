@@ -1,3 +1,175 @@
+// Dummy posts for initial load
+const DUMMY_POSTS = [
+  {
+    id: 1001,
+    user: { name: "Ayotech", avatar: "https://randomuser.me/api/portraits/men/32.jpg" },
+    text: "Welcome to SocialPay! 🚀 Try out all the features and let us know what you think.",
+    media: [],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 2).toISOString()
+  },
+  {
+    id: 1002,
+    user: { name: "KallyFX", avatar: "https://randomuser.me/api/portraits/men/45.jpg" },
+    text: "Just dropped a new video! 🎥🔥",
+    media: [
+      { data: "https://www.w3schools.com/html/mov_bbb.mp4", type: "video", name: "sample-video1.mp4" }
+    ],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5).toISOString()
+  },
+  {
+    id: 1003,
+    user: { name: "NathFavour", avatar: "https://randomuser.me/api/portraits/women/65.jpg" },
+    text: "Feeling grateful today! 🙏💡",
+    media: [
+      { data: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80", type: "image", name: "sample-image1.jpg" }
+    ],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24).toISOString()
+  },
+  {
+    id: 1004,
+    user: { name: "Ayotech", avatar: "https://randomuser.me/api/portraits/men/32.jpg" },
+    text: "Check out this cool sunset! 🌅",
+    media: [
+      { data: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80", type: "image", name: "sample-image2.jpg" }
+    ],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 30).toISOString()
+  },
+  {
+    id: 1005,
+    user: { name: "KallyFX", avatar: "https://randomuser.me/api/portraits/men/45.jpg" },
+    text: "Who else is coding tonight? 💻🌙",
+    media: [],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 48).toISOString()
+  },
+  {
+    id: 1006,
+    user: { name: "NathFavour", avatar: "https://randomuser.me/api/portraits/women/65.jpg" },
+    text: "Throwback to last weekend! 😁",
+    media: [
+      { data: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80", type: "image", name: "sample-image3.jpg" },
+      { data: "https://images.unsplash.com/photo-1465101178521-c1a9136a3c5a?auto=format&fit=crop&w=400&q=80", type: "image", name: "sample-image4.jpg" }
+    ],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 72).toISOString()
+  },
+  {
+    id: 1007,
+    user: { name: "RandomUser1", avatar: "https://randomuser.me/api/portraits/men/12.jpg" },
+    text: "Just joined SocialPay! 👋",
+    media: [],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 3).toISOString()
+  },
+  {
+    id: 1008,
+    user: { name: "RandomUser2", avatar: "https://randomuser.me/api/portraits/women/22.jpg" },
+    text: "Loving the vibes here! 🎉",
+    media: [],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 6).toISOString()
+  },
+  {
+    id: 1009,
+    user: { name: "RandomUser3", avatar: "https://randomuser.me/api/portraits/men/23.jpg" },
+    text: "Check out my new shoes! 👟",
+    media: [
+      { data: "https://images.unsplash.com/photo-1517260911205-8c8e9b1b3aee?auto=format&fit=crop&w=400&q=80", type: "image", name: "sample-image5.jpg" }
+    ],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 8).toISOString()
+  },
+  {
+    id: 1010,
+    user: { name: "RandomUser4", avatar: "https://randomuser.me/api/portraits/women/24.jpg" },
+    text: "Anyone up for a challenge? 🏆",
+    media: [],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 10).toISOString()
+  },
+  {
+    id: 1011,
+    user: { name: "RandomUser5", avatar: "https://randomuser.me/api/portraits/men/25.jpg" },
+    text: "Nature walk today 🌳🌲",
+    media: [
+      { data: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80", type: "image", name: "sample-image6.jpg" }
+    ],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 12).toISOString()
+  },
+  {
+    id: 1012,
+    user: { name: "RandomUser6", avatar: "https://randomuser.me/api/portraits/women/26.jpg" },
+    text: "Best coffee in town ☕️",
+    media: [],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 14).toISOString()
+  },
+  {
+    id: 1013,
+    user: { name: "RandomUser7", avatar: "https://randomuser.me/api/portraits/men/27.jpg" },
+    text: "Movie night! 🍿",
+    media: [
+      { data: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80", type: "image", name: "sample-image7.jpg" }
+    ],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 16).toISOString()
+  },
+  {
+    id: 1014,
+    user: { name: "RandomUser8", avatar: "https://randomuser.me/api/portraits/women/28.jpg" },
+    text: "Learning new things every day! 📚",
+    media: [],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 18).toISOString()
+  },
+  {
+    id: 1015,
+    user: { name: "RandomUser9", avatar: "https://randomuser.me/api/portraits/men/29.jpg" },
+    text: "Look at this cute puppy! 🐶",
+    media: [
+      { data: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80", type: "image", name: "sample-image8.jpg" }
+    ],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 20).toISOString()
+  },
+  {
+    id: 1016,
+    user: { name: "RandomUser10", avatar: "https://randomuser.me/api/portraits/women/30.jpg" },
+    text: "Workout done for today! 💪",
+    media: [],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 22).toISOString()
+  },
+  {
+    id: 1017,
+    user: { name: "RandomUser11", avatar: "https://randomuser.me/api/portraits/men/31.jpg" },
+    text: "Travel goals! ✈️🌍",
+    media: [
+      { data: "https://images.unsplash.com/photo-1465101178521-c1a9136a3c5a?auto=format&fit=crop&w=400&q=80", type: "image", name: "sample-image9.jpg" }
+    ],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 26).toISOString()
+  },
+  {
+    id: 1018,
+    user: { name: "RandomUser12", avatar: "https://randomuser.me/api/portraits/women/33.jpg" },
+    text: "Music is life 🎶",
+    media: [],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 28).toISOString()
+  },
+  {
+    id: 1019,
+    user: { name: "RandomUser13", avatar: "https://randomuser.me/api/portraits/men/34.jpg" },
+    text: "Just finished a great book! 📖",
+    media: [],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 32).toISOString()
+  },
+  {
+    id: 1020,
+    user: { name: "RandomUser14", avatar: "https://randomuser.me/api/portraits/women/35.jpg" },
+    text: "Sunshine and smiles today! 😁☀️",
+    media: [
+      { data: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80", type: "image", name: "sample-image10.jpg" }
+    ],
+    timestamp: new Date(Date.now() - 1000 * 60 * 60 * 36).toISOString()
+  }
+];
+
+function ensureDummyPosts() {
+  // Always overwrite with dummy posts for demo/testing
+  localStorage.setItem('socialpay_posts', JSON.stringify(DUMMY_POSTS));
+}
+ensureDummyPosts();
+
+
 function timeAgo(dateString) {
   const now = new Date();
   const posted = new Date(dateString);
@@ -25,6 +197,17 @@ function renderFeed() {
   feed.innerHTML = posts.map(post => {
     const comments = JSON.parse(localStorage.getItem(`comments_${post.id}`) || '[]');
     const totalComments = getTotalComments(comments);
+    // Media grid
+    let mediaGrid = '';
+    if (Array.isArray(post.media) && post.media.length) {
+      mediaGrid = `<div class="media-grid">` +
+        post.media.map((m, idx) =>
+          m.type === 'image'
+            ? `<img src="${m.data}" class="media-thumb" data-idx="${idx}" alt="media">`
+            : `<video src="${m.data}" class="media-thumb" data-idx="${idx}" controls muted></video>`
+        ).join('') +
+        `</div>`;
+    }
     return `
       <div class="post" data-id="${post.id}">
         <div class="post-header">
@@ -42,9 +225,7 @@ function renderFeed() {
           </span>
         </div>
         <p class="post-text">${post.text}</p>
-        ${post.media ? (post.mediaType === 'image'
-          ? `<div class="post-media"><img src="${post.media}" alt="media"></div>`
-          : `<div class="post-media"><video src="${post.media}" controls style="max-width:100%;border-radius:8px;"></video></div>`) : ''}
+        ${mediaGrid}
         <div class="post-actions">
           <span class="comment"><i class="fa-regular fa-comment"></i><span class="comment-count">${totalComments}</span></span>
           <span class="like"><i class="fa-regular fa-heart"></i><span class="like-count">0</span></span>
@@ -92,6 +273,7 @@ function renderFeed() {
   }).join('');
   attachPostReactions();
   attachInlineComments();
+  attachMediaLightbox();
 }
 
 function attachPostReactions() {
@@ -330,6 +512,58 @@ function attachInlineComments() {
       };
     });
   });
+}
+
+function attachMediaLightbox() {
+  document.querySelectorAll('.media-grid').forEach(grid => {
+    const postDiv = grid.closest('.post');
+    const postId = postDiv.getAttribute('data-id');
+    const posts = JSON.parse(localStorage.getItem('socialpay_posts') || '[]');
+    const post = posts.find(p => p.id == postId);
+    const media = post.media || [];
+    grid.querySelectorAll('.media-thumb').forEach((thumb, idx) => {
+      thumb.onclick = function() {
+        openLightbox(media, idx);
+      };
+    });
+  });
+}
+
+function openLightbox(mediaArr, startIdx) {
+  const lightbox = document.getElementById('mediaLightbox');
+  const closeBtn = document.getElementById('closeLightbox');
+  const content = document.getElementById('lightboxContent');
+  const prevBtn = document.getElementById('prevMedia');
+  const nextBtn = document.getElementById('nextMedia');
+  let idx = startIdx;
+
+  function showMedia(i) {
+    const m = mediaArr[i];
+    content.innerHTML = m.type === 'image'
+      ? `<img src="${m.data}" alt="media">`
+      : `<video src="${m.data}" controls autoplay style="background:#222"></video>`;
+  }
+  showMedia(idx);
+  lightbox.style.display = 'flex';
+
+  prevBtn.onclick = function() {
+    idx = (idx - 1 + mediaArr.length) % mediaArr.length;
+    showMedia(idx);
+  };
+  nextBtn.onclick = function() {
+    idx = (idx + 1) % mediaArr.length;
+    showMedia(idx);
+  };
+  closeBtn.onclick = function() {
+    lightbox.style.display = 'none';
+    content.innerHTML = '';
+  };
+  lightbox.onclick = function(e) {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+      content.innerHTML = '';
+    }
+  };
 }
 
 window.addEventListener('DOMContentLoaded', renderFeed);

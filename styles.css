@@ -671,3 +671,62 @@ main {
 #commentModal {
     display: none; /* Hidden by default */
 }
+
+/* Media grid styles */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 6px;
+  margin: 0.7rem 0;
+}
+.media-thumb {
+  width: 100%;
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.media-lightbox {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.media-lightbox .close-modal {
+  position: absolute;
+  right: 2vw;
+  top: 2vw;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+#mediaLightbox {
+  display: none; /* Hidden by default */
+}
+
+#lightboxContent img, #lightboxContent video {
+  max-width: 90vw;
+  max-height: 70vh;
+  border-radius: 10px;
+  background: #222;
+}
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+#prevMedia { left: 2vw; }
+#nextMedia { right: 2vw; }
