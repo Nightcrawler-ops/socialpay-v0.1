@@ -163,6 +163,7 @@ const DUMMY_POSTS = [
   }
 ];
 
+// Ensure dummy posts are present
 function ensureDummyPosts() {
   let posts = JSON.parse(localStorage.getItem('socialpay_posts') || '[]');
   if (!Array.isArray(posts) || posts.length === 0) {
@@ -326,14 +327,15 @@ function attachPostReactions() {
     const dollarIcon = dollarBtn.querySelector('i');
     const donationActivity = post.querySelector('.donation-activity');
     dollarBtn.onclick = function() {
-      const amount = prompt('Enter support amount (₦):', '15');
-      if (!amount || isNaN(amount) || Number(amount) < 15) return;
+      const amount = prompt('Enter support amount (₦):', '50');
+      if (!amount || isNaN(amount) || Number(amount) < 50) return;
       let isAnonymous = true;
-      if (confirm('Do you want your support to be public? Click OK to show initials, Cancel to stay anonymous.')) {
+      if (confirm('Kindly Click OK if you want your support to be public? If No, click CANCEL to stay anonymous.')) {
         isAnonymous = false;
       }
-      const userInitials = "A.Y.";
-      let feedback = isAnonymous ? 'Anonymous just sent support' : `${userInitials} just sent support`;
+      const getUsername = "Ayotech"; // Replace with actual username logic
+      const userInitials = getUsername ? getUsername.split(' ').map(n => n[0].toUpperCase()).join('') : 'SP';
+      let feedback = isAnonymous ? 'Anonymous just sent support' : `${getUsername} just sent support`;
       donationActivity.textContent = feedback;
       donationActivity.classList.add('active');
       setTimeout(() => {

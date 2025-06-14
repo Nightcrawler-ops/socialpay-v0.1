@@ -296,7 +296,7 @@ main {
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    font-size: 1rem; /* Font size for action labels */
+    font-size: 1.2rem; /* Font size for action labels */
     color: #333; /* Default color for action labels */
     cursor: pointer;
     margin-right: 1.2rem;
@@ -453,7 +453,7 @@ main {
 }
 
 .bottom-nav i.active {
-    color: #0066ff !important;
+    color: #0066ff !important; /* Active icon color */
     font-weight: bolder;
     transition: color 0.3s;
 }
