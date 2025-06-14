@@ -1,9 +1,20 @@
 // JavaScript for toggling profile menu
-document.getElementById('profileMenu').addEventListener('click', function() {
+document.getElementById('profileMenu').addEventListener('click', function(e) {
+    // Prevent click from bubbling up (so clicking inside dropdown doesn't close it)
+    e.stopPropagation();
     const dropdownIcon = document.getElementById('profileDropdownIcon');
     dropdownIcon.classList.toggle('fa-chevron-up');
     dropdownIcon.classList.toggle('fa-chevron-down');
     this.classList.toggle('active');
+    // Hide dropdown if clicking outside
+    document.addEventListener('click', function handler(event) {
+        if (!document.getElementById('profileMenu').contains(event.target)) {
+            document.getElementById('profileMenu').classList.remove('active');
+            dropdownIcon.classList.add('fa-chevron-down');
+            dropdownIcon.classList.remove('fa-chevron-up');
+            document.removeEventListener('click', handler);
+        }
+    });
 });
 
 // JavaScript for sidebar navigation
