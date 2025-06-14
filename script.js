@@ -104,13 +104,13 @@ document.querySelectorAll('.post').forEach(post => {
     const donationActivity = post.querySelector('.donation-activity');
 
     dollarBtn.addEventListener('click', function() {
-        // Simple modal for donation (for demo)
-        const amount = prompt('Enter donation amount (₦):', '15');
+        // Simple modal for support (for demo)
+        const amount = prompt('Enter support amount (₦):', '15');
         if (!amount || isNaN(amount) || Number(amount) < 15) return;
 
         // Ask for anonymity
         let isAnonymous = true;
-        if (confirm('Do you want your donation to be public? Click OK to show initials, Cancel to stay anonymous.')) {
+        if (confirm('Do you want your support to be public? Click OK to show initials, Cancel to stay anonymous.')) {
             isAnonymous = false;
         }
 
@@ -120,9 +120,9 @@ document.querySelectorAll('.post').forEach(post => {
         // Show feedback in donation activity (public)
         let feedback = '';
         if (isAnonymous) {
-            feedback = 'Anonymous just donated';
+            feedback = 'Anonymous just sent support';
         } else {
-            feedback = `${userInitials} just donated`;
+            feedback = `${userInitials} just sent support`;
         }
 
         donationActivity.textContent = feedback;
