@@ -164,8 +164,10 @@ const DUMMY_POSTS = [
 ];
 
 function ensureDummyPosts() {
-  // Always overwrite with dummy posts for demo/testing
-  localStorage.setItem('socialpay_posts', JSON.stringify(DUMMY_POSTS));
+  let posts = JSON.parse(localStorage.getItem('socialpay_posts') || '[]');
+  if (!Array.isArray(posts) || posts.length === 0) {
+    localStorage.setItem('socialpay_posts', JSON.stringify(DUMMY_POSTS));
+  }
 }
 ensureDummyPosts();
 
