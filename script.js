@@ -85,4 +85,56 @@ document.querySelectorAll('.post').forEach(post => {
             e.preventDefault();
         });
     }
+
+    // Share button logic
+    const shareBtn = post.querySelector('.share');
+    const shareCount = shareBtn.querySelector('.share-count');
+    const shareIcon = shareBtn.querySelector('i');
+    shareBtn.addEventListener('click', function() {
+        let count = parseInt(shareCount.textContent, 10) || 0;
+        count += 1;
+        shareCount.textContent = count;
+        shareIcon.classList.add('fa-solid');
+        setTimeout(() => shareIcon.classList.remove('fa-solid'), 500); // Visual feedback
+    });
+
+    // Dollar donate button logic
+    const dollarBtn = post.querySelector('.dollar');
+    const dollarCount = dollarBtn.querySelector('.dollar-count');
+    const dollarIcon = dollarBtn.querySelector('i');
+    dollarBtn.addEventListener('click', function() {
+        let count = parseInt(dollarCount.textContent, 10) || 0;
+        count += 1;
+        dollarCount.textContent = count;
+        dollarIcon.classList.add('fa-solid');
+        setTimeout(() => dollarIcon.classList.remove('fa-solid'), 500); // Visual feedback
+    });
+
+    // Comment button logic
+    const commentBtn = post.querySelector('.comment');
+    const commentBox = post.querySelector('.comment-box');
+    const commentCount = commentBtn.querySelector('.comment-count');
+    const commentInput = post.querySelector('.comment-input');
+    const commentSubmit = post.querySelector('.comment-submit');
+
+    commentBtn.addEventListener('click', function() {
+        if (commentBox) {
+            commentBox.style.display = commentBox.style.display === 'none' ? 'block' : 'none';
+            if (commentBox.style.display === 'block') {
+                commentInput.focus();
+            }
+        }
+    });
+
+    if (commentSubmit) {
+        commentSubmit.addEventListener('click', function() {
+            if (commentInput.value.trim() !== '') {
+                let count = parseInt(commentCount.textContent, 10) || 0;
+                count += 1;
+                commentCount.textContent = count;
+                commentInput.value = '';
+                commentBox.style.display = 'none';
+            }
+        });
+    }
 });
