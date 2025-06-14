@@ -17,6 +17,18 @@ document.getElementById('profileMenu').addEventListener('click', function(e) {
     });
 });
 
+function dismissIntro() {
+  document.getElementById('intro-banner').style.display = 'none';
+  localStorage.setItem('introDismissed', 'true');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const introDismissed = localStorage.getItem('introDismissed');
+  if (!introDismissed) {
+    document.getElementById('intro-banner').style.display = 'block';
+  }
+});
+
 // JavaScript for sidebar navigation
 document.querySelectorAll('.sidebar ul li').forEach(item => {
     item.addEventListener('click', function() {
