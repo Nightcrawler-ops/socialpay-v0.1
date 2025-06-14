@@ -17,7 +17,10 @@ document.getElementById('profileMenu').addEventListener('click', function(e) {
     });
 });
 
+<<<<<<< HEAD
 // JavaScript for dismissing the intro banner
+=======
+>>>>>>> 3425eab57e67a60a956ee9d7abbf0a6eb0c6461d
 function dismissIntro() {
   document.getElementById('intro-banner').style.display = 'none';
   localStorage.setItem('introDismissed', 'true');
