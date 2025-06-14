@@ -531,11 +531,19 @@ main {
     margin: 0.3rem 0 0.5rem 0.2rem;
     font-size: 0.97rem;
     color: #28a745;
-    min-height: 1.2em;
+    min-height: 0;
     font-style: italic;
     letter-spacing: 0.01em;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 0.5s, max-height 0.5s, margin 0.5s;
     pointer-events: none;
     position: relative;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.donation-activity.active {
+    opacity: 1;
+    max-height: 40px;
+    margin-bottom: 0.5rem;
 }

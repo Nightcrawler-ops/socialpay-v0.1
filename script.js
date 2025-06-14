@@ -126,11 +126,11 @@ document.querySelectorAll('.post').forEach(post => {
         }
 
         donationActivity.textContent = feedback;
-        donationActivity.style.opacity = 1;
+        donationActivity.classList.add('active');
 
-        // Fade out after 3 seconds
+        // Fade out and collapse after 3 seconds
         setTimeout(() => {
-            donationActivity.style.opacity = 0;
+            donationActivity.classList.remove('active');
         }, 3000);
 
         // Visual feedback on icon
