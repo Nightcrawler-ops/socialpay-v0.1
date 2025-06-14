@@ -52,9 +52,9 @@ mediaInput.addEventListener('change', function() {
 
   filesLoading = validFiles.length;
   mediaBtn.textContent = "Loading...";
-  loadingIndicator.textContent = `Uploading ${filesLoading} file(s)...`;
+  loadingIndicator.textContent = `Uploading ${filesLoading} file(s)... (Videos may take longer)`;
   loadingIndicator.style.display = 'block';
-  postBtn.disabled = true; // Disable post button while loading
+  postBtn.disabled = true;
 
   validFiles.forEach(file => {
     const reader = new FileReader();
@@ -68,9 +68,18 @@ mediaInput.addEventListener('change', function() {
       if (filesLoading === 0) {
         mediaBtn.textContent = `${mediaFiles.length} file(s) selected`;
         loadingIndicator.style.display = 'none';
-        postBtn.disabled = false; // Enable post button when done
+        postBtn.disabled = false;
       } else {
-        loadingIndicator.textContent = `Uploading ${filesLoading} file(s)...`;
+        loadingIndicator.textContent = `Uploading ${filesLoading} file(s)... (Videos may take longer)`;
+      }
+    };
+    reader.onerror = function() {
+      alert(`Failed to load file: ${file.name}`);
+      filesLoading--;
+      if (filesLoading === 0) {
+        mediaBtn.textContent = `${mediaFiles.length} file(s) selected`;
+        loadingIndicator.style.display = 'none';
+        postBtn.disabled = false;
       }
     };
     reader.readAsDataURL(file);
