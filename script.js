@@ -98,16 +98,44 @@ document.querySelectorAll('.post').forEach(post => {
         setTimeout(() => shareIcon.classList.remove('fa-solid'), 500); // Visual feedback
     });
 
-    // Dollar donate button logic
+    // Dollar donate button logic with modal for anonymity
     const dollarBtn = post.querySelector('.dollar');
-    const dollarCount = dollarBtn.querySelector('.dollar-count');
     const dollarIcon = dollarBtn.querySelector('i');
+    const donationActivity = post.querySelector('.donation-activity');
+
     dollarBtn.addEventListener('click', function() {
-        let count = parseInt(dollarCount.textContent, 10) || 0;
-        count += 1;
-        dollarCount.textContent = count;
+        // Simple modal for donation (for demo)
+        const amount = prompt('Enter donation amount (₦):', '15');
+        if (!amount || isNaN(amount) || Number(amount) < 15) return;
+
+        // Ask for anonymity
+        let isAnonymous = true;
+        if (confirm('Do you want your donation to be public? Click OK to show initials, Cancel to stay anonymous.')) {
+            isAnonymous = false;
+        }
+
+        // Get user initials (for demo, hardcoded; in real app, fetch from user profile)
+        const userInitials = "A.Y.";
+
+        // Show feedback in donation activity (public)
+        let feedback = '';
+        if (isAnonymous) {
+            feedback = 'Anonymous just donated';
+        } else {
+            feedback = `${userInitials} just donated`;
+        }
+
+        donationActivity.textContent = feedback;
+        donationActivity.style.opacity = 1;
+
+        // Fade out after 3 seconds
+        setTimeout(() => {
+            donationActivity.style.opacity = 0;
+        }, 3000);
+
+        // Visual feedback on icon
         dollarIcon.classList.add('fa-solid');
-        setTimeout(() => dollarIcon.classList.remove('fa-solid'), 500); // Visual feedback
+        setTimeout(() => dollarIcon.classList.remove('fa-solid'), 500);
     });
 
     // Comment button logic
