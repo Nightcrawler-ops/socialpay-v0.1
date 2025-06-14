@@ -12,6 +12,10 @@ body {
     color: #1d1d1f;
 }
 
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent element */
+}
 /* Header styles: sticky top navigation */
 /* Header styles: sticky top navigation */
 header {

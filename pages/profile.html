@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile | SocialPay</title>
+  <link rel="stylesheet" href="/styles/profile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <!-- ...reuse your header code here... -->
+  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <!-- ...reuse your sidebar code here... -->
+    </aside>
+    <main class="profile-main">
+      <section class="profile-header">
+        <img src="avatar.jpg" alt="User Avatar" class="profile-avatar">
+        <div class="profile-info">
+          <h2 class="profile-username">Username</h2>
+          <p class="profile-bio">This is a short bio about the user. You can edit your profile to update this.</p>
+          <div class="profile-stats">
+            <span><strong>120</strong> Posts</span>
+            <span><strong>340</strong> Followers</span>
+            <span><strong>180</strong> Following</span>
+          </div>
+          <button class="edit-profile-btn">Edit Profile</button>
+        </div>
+      </section>
+      <nav class="profile-tabs">
+        <button class="tab-btn active" data-tab="posts">Posts</button>
+        <button class="tab-btn" data-tab="about">About</button>
+      </nav>
+      <section class="profile-content">
+        <div class="tab-content active" id="posts">
+          <div class="feed">
+            <!-- Example post -->
+            <div class="post">
+              <div class="post-header">
+                <img src="avatar.jpg" class="avatar" alt="Profile">
+                <div class="user-info">
+                  <span class="username">Username</span>
+                  <span class="timestamp">2h ago</span>
+                </div>
+              </div>
+              <div class="post-text">This is a sample post on the profile page.</div>
+              <div class="post-actions">
+                <span class="comment">
+                  <i class="fa-regular fa-comment"></i>
+                  <span class="comment-count">0</span>
+                </span>
+                <span class="like">
+                  <i class="fa-regular fa-heart"></i>
+                  <span class="like-count">0</span>
+                </span>
+                <span class="dollar">
+                  <i class="fa-regular fa-dollar-sign"></i>
+                  <span class="dollar-count">0</span>
+                </span>
+                <span class="share">
+                  <i class="fa-regular fa-share-from-square"></i>
+                  <span class="share-count">0</span>
+                </span>
+              </div>
+            </div>
+            <!-- Add more posts as needed -->
+          </div>
+        </div>
+        <div class="tab-content" id="about">
+          <h3>About</h3>
+          <p>This section contains more detailed information about the user.</p>
+        </div>
+      </section>
+    </main>
+    <aside class="rightbar">
+      <!-- ...reuse your rightbar code here... -->
+    </aside>
+  </div>
+  <script src="scripts/profile.js"></script>
+</body>
+</html>
