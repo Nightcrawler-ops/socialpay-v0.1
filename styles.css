@@ -13,16 +13,17 @@ body {
 }
 
 /* Header styles: sticky top navigation */
+/* Header styles: sticky top navigation */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 1rem 2rem;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out children */
+    align-items: center; /* Vertically center items */
+    background-color: #ffffff; /* White background */
+    padding: 1rem 3rem; /* Padding around header */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1); /* Subtle shadow */
     position: sticky; /* Keeps header visible on scroll */
-    top: 0;
-    z-index: 10;
+    top: 0; /* Stick to top of viewport */
+    z-index: 10; /* Ensure header is above other content */
 }
 
 /* Header right section for profile and search */
