@@ -35,8 +35,8 @@ document.querySelectorAll('.bottom-nav a').forEach(item => {
 
 // JavaScript for creating a post
 document.querySelector('.create-post').addEventListener('click', function() {
-    // Logic for creating a post
-    alert('Create Post functionality is not implemented yet.');
+    // Redirect to the post creation page
+    window.location.href = '../pages/post.html';
 });
 
 // JavaScript for liking a post (button click or double-tap on image/video)

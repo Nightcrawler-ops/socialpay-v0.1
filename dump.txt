@@ -1,0 +1,239 @@
+        <!-- Main feed area -->
+        <main class="feed">
+            <!-- Post 1 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="assets/images/profile/yello.jpeg" alt="Ayotech" class="avatar">
+                    <div class="user-info">
+                        <span class="username">Ayotech👨‍💻</span>
+                        <span class="timestamp">2h</span>
+                    </div>
+                    <span class="timestamp right">2h</span>
+                </div>
+                <p class="post-text">Excited to announce our new project is launching soon! Stay tuned for updates.</p>
+                <div class="post-media">
+                    <img src="assets/images/post/socialmedia.jpg" alt="User" class="avatar">
+                </div>
+                <div class="post-actions">
+                    <span class="comment">
+                      <i class="fa-regular fa-comment"></i>
+                      <span class="comment-count">0</span>
+                    </span>
+                    <span class="like">
+                      <i class="fa-regular fa-heart"></i>
+                      <span class="like-count">0</span>
+                    </span>
+                    <span class="dollar">
+                      <i class="fa-regular fa-dollar-sign"></i>
+                      <!-- No public count here for donations -->
+                    </span>
+                    <span class="share">
+                      <i class="fa-regular fa-share-from-square"></i>
+                      <span class="share-count">0</span>
+                    </span>
+                </div>
+                <!-- Donation activity feedback (public, below post actions) -->
+                <div class="donation-activity"></div>
+                <!-- Place this below your post actions -->
+                <div class="comment-box">
+                  <input type="text" class="comment-input" placeholder="Write a comment...">
+                  <button class="comment-submit">Post</button>
+                </div>
+            </div>
+            <!-- Post 2 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="assets/images/avatar2.png" alt="KallyFX" class="avatar">
+                    <div class="user-info">
+                        <span class="username">KallyFX 💹</span>
+                        <span class="timestamp">3h</span>
+                    </div>
+                    <span class="timestamp right">3h</span>
+                </div>
+                <p class="post-text">Here’s a look at the sunset from last night’s hike</p>
+                <div class="post-media">
+                    <img src="assets/images/post/media.jpg" alt="User" class="avatar">
+                </div>
+                <div class="post-actions">
+                    <span class="comment">
+                      <i class="fa-regular fa-comment"></i>
+                      <span class="comment-count">0</span>
+                    </span>
+                    <span class="like">
+                      <i class="fa-regular fa-heart"></i>
+                      <span class="like-count">0</span>
+                    </span>
+                    <span class="dollar">
+                      <i class="fa-regular fa-dollar-sign"></i>
+                      <!-- No public count here for donations -->
+                    </span>
+                    <span class="share">
+                      <i class="fa-regular fa-share-from-square"></i>
+                      <span class="share-count">0</span>
+                    </span>
+                </div>
+                <!-- Donation activity feedback (public, below post actions) -->
+                <div class="donation-activity"></div>
+                <!-- Place this below your post actions -->
+                <div class="comment-box">
+                  <input type="text" class="comment-input" placeholder="Write a comment...">
+                  <button class="comment-submit">Post</button>
+                </div>
+            </div>
+            <!-- Post 3 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="assets/images/profile/profile 1.jpg" alt="Nath Favour" class="avatar">
+                    <div class="user-info">
+                        <span class="username">Nath Favour</span>
+                        <span class="timestamp">5h</span>
+                    </div>
+                    <span class="timestamp right">5h</span>
+                </div>
+                <p class="post-text">Looking for recommendations for a good book to read. Any suggestions?</p>
+                <div class="post-actions">
+                    <span class="comment">
+                      <i class="fa-regular fa-comment"></i>
+                      <span class="comment-count">0</span>
+                    </span>
+                    <span class="like">
+                      <i class="fa-regular fa-heart"></i>
+                      <span class="like-count">0</span>
+                    </span>
+                    <span class="dollar">
+                      <i class="fa-regular fa-dollar-sign"></i>
+                      <!-- No public count here for donations -->
+                    </span>
+                    <span class="share">
+                      <i class="fa-regular fa-share-from-square"></i>
+                      <span class="share-count">0</span>
+                    </span>
+                </div>
+                <!-- Donation activity feedback (public, below post actions) -->
+                <div class="donation-activity"></div>
+                <!-- Place this below your post actions -->
+                <div class="comment-box">
+                  <input type="text" class="comment-input" placeholder="Write a comment...">
+                  <button class="comment-submit">Post</button>
+                </div>
+            </div>
+            <!-- Post 4 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="assets/images/avatar4.png" alt="Sarah Lee" class="avatar">
+                    <div class="user-info">
+                        <span class="username">Sarah Lee</span>
+                        <span class="timestamp">8h</span>
+                    </div>
+                    <span class="timestamp right">8h</span>
+                </div>
+                <p class="post-text">Had a great time at the event today! Thanks to everyone who came out. 😊</p>
+                <div class="post-media">
+                    <img src="assets/images/post/students.jpg" alt="User" class="avatar">
+                </div>
+                <div class="post-actions">
+                    <span class="comment">
+                      <i class="fa-regular fa-comment"></i>
+                      <span class="comment-count">0</span>
+                    </span>
+                    <span class="like">
+                      <i class="fa-regular fa-heart"></i>
+                      <span class="like-count">0</span>
+                    </span>
+                    <span class="dollar">
+                      <i class="fa-regular fa-dollar-sign"></i>
+                      <!-- No public count here for donations -->
+                    </span>
+                    <span class="share">
+                      <i class="fa-regular fa-share-from-square"></i>
+                      <span class="share-count">0</span>
+                    </span>
+                </div>
+                <!-- Donation activity feedback (public, below post actions) -->
+                <div class="donation-activity"></div>
+                <!-- Place this below your post actions -->
+                <div class="comment-box">
+                  <input type="text" class="comment-input" placeholder="Write a comment...">
+                  <button class="comment-submit">Post</button>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-header">
+                    <img src="assets/images/profile/profile 1.jpg" alt="Ayotech" class="avatar">
+                    <div class="user-info">
+                        <span class="username">Ayotech 🧑‍💻</span>
+                        <span class="timestamp">2h</span>
+                    </div>
+                    <span class="timestamp right">2h</span>
+                </div>
+                <p class="post-text">Excited to announce our new project is launching soon! Stay tuned for updates.</p>
+                <div class="post-media">
+                    <img src="assets/images/post/socialmedia.jpg" alt="User" class="avatar">
+                </div>
+                <div class="post-actions">
+                    <span class="comment">
+                      <i class="fa-regular fa-comment"></i>
+                      <span class="comment-count">0</span>
+                    </span>
+                    <span class="like">
+                      <i class="fa-regular fa-heart"></i>
+                      <span class="like-count">0</span>
+                    </span>
+                    <span class="dollar">
+                      <i class="fa-regular fa-dollar-sign"></i>
+                      <!-- No public count here for donations -->
+                    </span>
+                    <span class="share">
+                      <i class="fa-regular fa-share-from-square"></i>
+                      <span class="share-count">0</span>
+                    </span>
+                </div>
+                <!-- Donation activity feedback (public, below post actions) -->
+                <div class="donation-activity"></div>
+                <!-- Place this below your post actions -->
+                <div class="comment-box">
+                  <input type="text" class="comment-input" placeholder="Write a comment...">
+                  <button class="comment-submit">Post</button>
+                </div>
+            </div>
+            <!-- Post 2 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="assets/images/avatar2.png" alt="KallyFX" class="avatar">
+                    <div class="user-info">
+                        <span class="username">KallyFX 💹</span>
+                        <span class="timestamp">3h</span>
+                    </div>
+                    <span class="timestamp right">3h</span>
+                </div>
+                <p class="post-text">Here’s a look at the sunset from last night’s hike</p>
+                <div class="post-media">
+                    <img src="assets/images/post/media.jpg" alt="User" class="avatar">
+                </div>
+                <div class="post-actions">
+                    <span class="comment">
+                      <i class="fa-regular fa-comment"></i>
+                      <span class="comment-count">0</span>
+                    </span>
+                    <span class="like">
+                      <i class="fa-regular fa-heart"></i>
+                      <span class="like-count">0</span>
+                    </span>
+                    <span class="dollar">
+                      <i class="fa-regular fa-dollar-sign"></i>
+                      <!-- No public count here for donations -->
+                    </span>
+                    <span class="share">
+                      <i class="fa-regular fa-share-from-square"></i>
+                      <span class="share-count">0</span>
+                    </span>
+                </div>
+                <!-- Donation activity feedback (public, below post actions) -->
+                <div class="donation-activity"></div>
+                <!-- Place this below your post actions -->
+                <div class="comment-box">
+                  <input type="text" class="comment-input" placeholder="Write a comment...">
+                  <button class="comment-submit">Post</button>
+                </div>
+            </div>
+        </main>

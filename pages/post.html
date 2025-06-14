@@ -1,11 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SocialPay - Create Post</title>
-  <link rel="stylesheet" href="styles/post.css" />
+  <link rel="stylesheet" href="../styles/post.css" />
+  <!-- Add Font Awesome CDN below -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <div class="container">
@@ -16,11 +17,21 @@
       </div>
       <textarea placeholder="What's on your mind?"></textarea>
       <div class="actions">
-        <button class="media-btn">📷 Media</button>
-        <button class="post-btn">Post</button>
+        <input type="file" id="mediaInput" accept="image/*,video/*" title="Upload media">
+        <button class="media-btn" id="mediaBtn">📷 Media</button>
+        <button class="post-btn" id="postBtn">Post</button>
       </div>
     </div>
   </div>
-  <script src="/scripts/post.js"></script>
+
+    <nav class="bottom-nav">
+        <a href="../index.html" class="Home" title="Home"><i class="fa-solid fa-house active"></i></a>
+        <a href="#" title="Comments"><i class="fa-solid fa-comment"></i></a>
+        <a href="../pages/post.html" title="Create Post"><i class="fa-solid fa-plus-circle"></i></a>
+        <a href="#" title="Wallet"><i class="fa-solid fa-wallet"></i></a>
+        <a href="../pages/profile.html" title="Profile"><i class="fa-regular fa-user"></i></a>
+    </nav>
+
+  <script src="../scripts/post.js"></script>
 </body>
 </html>
