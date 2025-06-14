@@ -218,7 +218,7 @@ main {
 .post {
     background: #fff;
     border-radius: 10px;
-    padding: 1.2rem 1.5rem;
+    padding: 1.2rem 1.5rem; /* Padding for post content */
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     margin-bottom: 0.5rem;
 }
@@ -278,9 +278,9 @@ main {
 }
 .post-media img {
     max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container without stretching */
+    display: block; /* Ensure images are block elements */
 }
 
 /* Post actions (like, comment, share, etc.) */
@@ -508,7 +508,9 @@ main {
         align-items: center;
         justify-content: space-between;
         padding: 1rem 1rem 0.5rem 1rem;
-        position: relative;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
     
     .header-right {

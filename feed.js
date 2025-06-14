@@ -171,7 +171,7 @@ function ensureDummyPosts() {
 }
 ensureDummyPosts();
 
-
+// Utility functions for rendering feed, time ago, and comment counts
 function timeAgo(dateString) {
   const now = new Date();
   const posted = new Date(dateString);
@@ -278,6 +278,7 @@ function renderFeed() {
   attachMediaLightbox();
 }
 
+// Attach event listeners for post reactions and comments
 function attachPostReactions() {
   document.querySelectorAll('.post').forEach(post => {
     // Like
